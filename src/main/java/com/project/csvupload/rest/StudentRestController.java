@@ -32,19 +32,6 @@ public class StudentRestController {
 		return studentService.findAll();
 	}
 
-	// add mapping for GET /employees/{employeeId}
-	
-	/*
-	 * @GetMapping("/employees/{employeeId}") public Student
-	 * getEmployee(@PathVariable int employeeId) {
-	 * 
-	 * Student theEmployee = employeeService.findById(employeeId);
-	 * 
-	 * if (theEmployee == null) { throw new
-	 * RuntimeException("Employee id not found - " + employeeId); }
-	 * 
-	 * return theEmployee; }
-	 */
 
 }
 

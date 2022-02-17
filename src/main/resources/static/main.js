@@ -18,7 +18,7 @@ function uploadSingleFile(file) {
         var response = JSON.parse(xhr.responseText);
         if(xhr.status == 200) {
             singleFileUploadError.style.display = "none";
-            singleFileUploadSuccess.innerHTML = "<p>File Uploaded Successfully.</p>";
+            singleFileUploadSuccess.innerHTML = "<p>File Uploaded Successfully.</p> <p>Link : <a href='/students/list' >View Student List </a></p>";
             singleFileUploadSuccess.style.display = "block";
         } else {
             singleFileUploadSuccess.style.display = "none";
@@ -29,6 +29,10 @@ function uploadSingleFile(file) {
     }
 
     xhr.send(formData);
+
+    function newFunction() {
+        return "' >";
+    }
 }
 
 
