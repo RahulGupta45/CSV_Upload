@@ -2,49 +2,50 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
 	<title>Student Directory</title>
 </head>
 
 <body>
 
-<div class="container">
+	<div class="container">
 
-	<h3>Student Directory</h3>
-	<hr>
-	
-	<table class="table table-bordered table-striped">
-		<thead class="thead-dark">
-			<tr>
-				<th>Roll No</th>
-				<th>Name</th>
-				<th>Email</th>
-				<th>Phone No</th>
-			</tr>
-		</thead>
-		
-		<tbody>
-			<tr th:each="tempStudent : ${students}">
-			
-				<td th:text="${tempStudent.id}" />	
-				<td th:text="${tempStudent.name}" />	
-				<td th:text="${tempStudent.email}" />
-				<td th:text="${tempStudent.phone}" />	
-				
-			</tr>
-		</tbody>		
-	</table>
-	
-</div>
-	
+		<h3>Student Directory</h3>
+		<hr>
+
+		<!-- class="table table-bordered table-striped" -->
+		<table class="table table-bordered">
+			<!-- class="thead-dark" -->
+			<thead>
+				<tr>
+					<th>Roll No</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone No</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="tempStudent : ${students}">
+
+					<td th:text="${tempStudent.id}" />
+					<td th:text="${tempStudent.name}" />
+					<td th:text="${tempStudent.email}" />
+					<td th:text="${tempStudent.phone}" />
+
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
 </body>
+
 </html>
-
-
-

@@ -3,30 +3,27 @@ package com.project.csvupload.controller;
 public class ResponseMessage {
 
 	private String message;
-	private String fileDownloadUri;
-	
+	private String fileUri;
 
-	  public ResponseMessage(String message, String fileDownloadUri) {
-	    this.message = message;
-	    this.fileDownloadUri = fileDownloadUri;
-	  }
-
+	public ResponseMessage(String message, String fileUri) {
+		this.message = message;
+		this.fileUri = fileUri;
+	}
 
 	public String getMessage() {
-	    return message;
-	  }
-
-	  public void setMessage(String message) {
-	    this.message = message;
-	  }
-
-	public String getFileDownloadUri() {
-		return fileDownloadUri;
+		return message;
 	}
 
-	public void setFileDownloadUri(String fileDownloadUri) {
-		this.fileDownloadUri = fileDownloadUri;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
-	  
+	public String getFileUri() {
+		return fileUri;
+	}
+
+	public void setFiledUri(String fileUri) {
+		this.fileUri = fileUri;
+	}
+
 }
